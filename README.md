@@ -1,11 +1,11 @@
-# Scoring and Rerankers
+# LAB | Relevance Scoring and Rerankers for Trustworthy AI & EU AI Act
 
 This repository contains a notebook-based lab for building and evaluating a retrieval pipeline over:
 
 - the Trustworthy AI podcast transcript
 - the EU AI Act PDF
 
-The main working notebook is `Test_relevance_scoring_rerankers.ipynb`.
+The main working notebook is `relevance_scoring_rerankers.ipynb`.
 
 ## How to run
 
@@ -13,7 +13,7 @@ The main working notebook is `Test_relevance_scoring_rerankers.ipynb`.
    - `OPENAI_API_KEY`
    - `PINECONE_API_KEY`
 
-2. Open `Test_relevance_scoring_rerankers.ipynb` in Jupyter, VS Code, or another notebook runner.
+2. Open `relevance_scoring_rerankers.ipynb` in Jupyter, VS Code, or another notebook runner.
 
 3. Run the notebook from top to bottom.
 
@@ -31,32 +31,29 @@ The main working notebook is `Test_relevance_scoring_rerankers.ipynb`.
 
 ### Root files
 
-- `Lab.md`
-  - Assignment brief and expected project steps.
-
 - `README.md`
   - This guide.
 
 - `lab_summary.md`
   - High-level summary of the implemented workflow and current state.
 
-- `Test_relevance_scoring_rerankers.ipynb`
+- `relevance_scoring_rerankers.ipynb`
   - Main notebook used to build the solution step by step.
 
-- `relevance_scoring_rerankers.ipynb`
-  - Reference/original notebook in the repository.
+- `Test_relevance_scoring_rerankers.ipynb`
+  - Reference notebook in the repository that was used for testing each step. At the end is the same as the main.
 
 - `Chunking quality review_v1.md`
-  - Earlier notes on chunk quality.
+  - Chunking outputs and reviews with corresponding comments.
 
 - `Chunking quality review_v2.md`
-  - Updated notes on chunk quality after cleanup and comparison.
+  - Updated notes on chunk quality after cleanup and comparison, with corresponding comments.
 
 - `Metadata filtering.md`
-  - Notes about metadata filtering behavior.
+  - Output of the metadata filtering behavior.
 
 - `Comparing filtered and unfiltered metadata.md`
-  - Notes comparing filtered and unfiltered retrieval.
+  - Notes comparing filtered and unfiltered retrieval, with corresponding comments.
 
 - `Performance evaluation with and without reranking.md`
   - Notes comparing retrieval with and without reranking.
@@ -90,9 +87,3 @@ The main working notebook is `Test_relevance_scoring_rerankers.ipynb`.
 - Builds a RAG pipeline with reranking
 - Compares retrieval quality with and without reranking
 - Records a compact manual evaluation
-
-## Notes
-
-- The notebook is the authoritative implementation.
-- If you rerun the vectorstore cell, the current `chunked_docs` set is what gets indexed.
-- The source PDF text contains OCR artifacts, so the notebook includes a light cleanup pass before chunking.
